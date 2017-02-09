@@ -1,7 +1,5 @@
 package stock;
 
-import java.util.Scanner;
-
 public class StockOb {
 	private Double currentPrice;
 	private String symbol;

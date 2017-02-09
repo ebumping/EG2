@@ -22,5 +22,9 @@ public class Boat extends Vehicle{
 			System.out.println("You hear the engine but don't seem to be going anywhere...");
 		}
 	}
+	
+	public void sink(){
+		System.out.println("bloop");
+	}
 
 }
