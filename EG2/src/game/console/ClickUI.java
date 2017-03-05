@@ -81,7 +81,7 @@ public class ClickUI implements SystemInterface {
 	@Override
 	public boolean gg() {
 
-		if (progress <= 5) {
+		if (progress <= 49) {
 			System.out.println("Not quite there yet");
 			gg = false;
 		} else if (progress >= 50 && progress <= 99) {
