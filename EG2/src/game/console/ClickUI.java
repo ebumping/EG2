@@ -65,7 +65,7 @@ public class ClickUI implements SystemInterface {
 				play();
 			}
 		});
-		btnClickMe.setBounds(69, 170, 89, 23);
+		btnClickMe.setBounds(157, 121, 89, 23);
 		frame.getContentPane().add(btnClickMe);
 	}
 

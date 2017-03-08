@@ -10,11 +10,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
-public class ConsoleUI {
+public class D20UI extends RollD20{
 
 	
 	private JFrame frame;
-	private JTextField gameSelect;
 	protected JTextField playerNumber;
 
 	/**
@@ -24,7 +23,7 @@ public class ConsoleUI {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ConsoleUI window = new ConsoleUI();
+					D20UI window = new D20UI();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +35,7 @@ public class ConsoleUI {
 	/**
 	 * Create the application.
 	 */
-	public ConsoleUI() {
+	public D20UI() {
 		initialize();
 	}
 
@@ -48,32 +47,24 @@ public class ConsoleUI {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+
 		
-		JLabel lblNumberOfPlayers = new JLabel("Number of Players");
-		lblNumberOfPlayers.setBounds(281, 36, 88, 14);
-		frame.getContentPane().add(lblNumberOfPlayers);
-		
-		gameSelect = new JTextField();
-		gameSelect.setBounds(379, 8, 45, 20);
-		frame.getContentPane().add(gameSelect);
-		gameSelect.setColumns(10);
-		
-		JLabel lblGameSelection = new JLabel("Game Selection");
-		lblGameSelection.setBounds(281, 11, 88, 14);
-		frame.getContentPane().add(lblGameSelection);
-		
-		playerNumber = new JTextField();
-		playerNumber.setBounds(379, 33, 45, 20);
-		frame.getContentPane().add(playerNumber);
-		playerNumber.setColumns(10);
-		
-		JButton btnSubmit = new JButton("Submit");
+		JButton btnSubmit = new JButton("Roll");
 		btnSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				play();
 			}
 		});
 		btnSubmit.setBounds(335, 228, 89, 23);
 		frame.getContentPane().add(btnSubmit);
+		
+		JButton btnQuit = new JButton("Quit");
+		btnQuit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				quit();
+			}
+		});
+		btnQuit.setBounds(10, 228, 89, 23);
+		frame.getContentPane().add(btnQuit);
 	}
 }
