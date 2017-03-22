@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class RollD20 implements SystemInterface {
 	int rng20 = (int) rngVal();
-	int players = 1;
+	int players = 3;
 
 	@Override
 	public void play() {
@@ -40,7 +40,7 @@ public class RollD20 implements SystemInterface {
 	}
 
 	public void log() {
-		System.out.println("You roll : " + rngVal());
+		System.out.println(rngVal());
 	}
 
 	protected void quit() {

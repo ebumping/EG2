@@ -61,7 +61,7 @@ public class D20UI extends RollD20{
 		JButton btnQuit = new JButton("Quit");
 		btnQuit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				quit();
+				gg();
 			}
 		});
 		btnQuit.setBounds(10, 228, 89, 23);
